@@ -1,0 +1,4 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=some-long-password
+POSTGRES_DB=jobapplication
+POSTGRES_PORT=5432
