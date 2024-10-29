@@ -1,0 +1,52 @@
+<% date_default = job_application.application_date.nil? ? Date.today : job_application.application_date %>
+<% button_content = job_application.application_position.nil? ? 'Create Job Application' : 'Update Job Application'%>
+<%= form_with(model: job_application, local: true) do |f| %>
+  <section>
+    <% if job_application.application_capture.present? %>
+      <%= image_tag @job_application.application_capture, class: 'application_capture' %>
+    <% end %>
+    <%= f.file_field :application_capture %>
+  </section>
+
+  <% if job_application.application_capture.nil? %>
+    <section>
+      <%= f.file_field :application_capture %>
+    </section>
+  <% end %>
+  <section>
+    <%= f.label :application_date %>
+    <%= f.date_field :application_date, value:date_default, required: true %>
+    <% @job_application.errors.full_messages_for(:application_date).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </section>
+  <section>
+    <%= f.label :application_position %>
+    <%= f.text_field :application_position, required: true %>
+    <% @job_application.errors.full_messages_for(:application_position).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </section>
+  <section>
+    <%= f.label :application_company %>
+    <%= f.text_field :application_company, required: true %>
+    <% @job_application.errors.full_messages_for(:application_company).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </section>
+  <section>
+    <%= f.label :application_platform %>
+    <%= f.text_field :application_platform, required: true %>
+    <% @job_application.errors.full_messages_for(:application_platform).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </section>
+  <section>
+    <%= f.label :application_state %>
+    <%= f.select :application_state, application_state_options, require: true %>
+    <% @job_application.errors.full_messages_for(:application_state).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </section>
+  <%= f.submit button_content %>
+<% end %>

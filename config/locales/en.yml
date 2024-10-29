@@ -29,3 +29,11 @@
 
 en:
   hello: "Hello world"
+  enums:
+    job_application:
+      application_states:
+        in_process: "in process"
+        in_interviews: "in interviews"
+        in_evaluation: "in evaluation"
+        rejected: "rejected"
+        hired: "hired"

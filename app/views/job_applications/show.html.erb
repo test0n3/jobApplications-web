@@ -1,0 +1,25 @@
+<h2>Job Application <%= @job_application.id %></h2>
+<div>
+  <p>
+    <%= @job_application.application_date %>, 
+    <%= @job_application.application_position %>, 
+    <%= @job_application.application_company %>, 
+    <%= @job_application.application_platform %>, 
+    <%= application_state_translated(@job_application.application_state) %>
+  </p>
+  <% if @job_application.application_capture.present? %>
+    <section>
+      <%= image_tag @job_application.application_capture, class: 'application_capture' %>
+    </section>
+  <% end %>
+</div>
+<p>
+  <%= link_to "< retornar", job_applications_path %>, 
+  <%= link_to "Edit application", edit_job_application_path(@job_application) %>
+  <%= link_to "Destroy", job_application_path(@job_application), data: { 
+                  turbo_method: :delete, 
+                  turbo_confirm: "Are you sure?" 
+                } %>
+</p>
+<%# TODO display thumbnail for image %>
+<%# TODO display thumbnail that can be scaled %>

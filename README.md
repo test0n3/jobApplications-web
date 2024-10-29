@@ -10,4 +10,4 @@
 ## Specifics
 - Ruby version: 3.3.5
 - Rails version: 7.2.1.1
-- Postgres version:
+- testing by RSpec

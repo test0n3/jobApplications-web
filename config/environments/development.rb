@@ -88,4 +88,6 @@ Rails.application.configure do
     Bullet.rails_logger = true
     Bullet.add_footer = true
   end
+  # Enable/disable caching. By default caching is disabled.
+  config.web_console.whitelisted_ips = '172.20.0.0/16'
 end

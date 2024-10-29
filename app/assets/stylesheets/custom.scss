@@ -1,0 +1,23 @@
+$gray-medium-light: #eaeaea;
+
+body {
+  font-family: sans-serif;
+}
+
+.application_capture {
+  width: 200px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug-dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
