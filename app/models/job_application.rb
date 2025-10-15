@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: job_applications
+#
+#  id               :integer          not null, primary key
+#  application_date :date
+#  position         :string
+#  company          :string
+#  platform         :string
+#  state            :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 class JobApplication < ApplicationRecord
   enum :state, {
     in_process: 1,
