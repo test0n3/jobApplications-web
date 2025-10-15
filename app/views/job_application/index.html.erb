@@ -1,0 +1,29 @@
+<h1>Job Application</h1>
+<% if @job_applications %>
+  <div class="job-applications">
+    <table>
+      <thead>
+      <tr>
+        <th>Application date</th>
+        <th>Platform</th>
+        <th>Company</th>
+        <th>Position</th>
+        <th>State</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @job_applications.each do |application| %>
+        <tr>
+          <td><%= application.application_date %></td>
+          <td><%= application.platform %></td>
+          <td><%= application.company %></td>
+          <td><%= application.position %></td>
+          <td><%= application.state %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <% else %>
+  <p>No applications present</p>
+<% end %>

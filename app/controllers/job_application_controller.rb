@@ -1,6 +1,6 @@
 class JobApplicationController < ApplicationController
   def index
-    JobApplication.all
+    @job_application = JobApplication.all
   end
 
   def show;end
