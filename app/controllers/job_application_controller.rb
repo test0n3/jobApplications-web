@@ -3,7 +3,9 @@ class JobApplicationController < ApplicationController
     @job_applications = JobApplication.all
   end
 
-  def show;end
+  def show
+    @job_application =JobApplication.find(params[:id])
+  end
 
   def new; end
 
