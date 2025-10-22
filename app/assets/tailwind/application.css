@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme: {
+    --color-myorange-500: oklch(0.6983 0.2027 44.12);
+}
+
+body {
+    font-family: Sans-Serif;
+}
+header, footer {
+    background-color: oklch(0.6983 0.2027 44.12);
+    color: var(--color-slate-300);
+}
+
+header {
+    font-weight: bold;
+}
