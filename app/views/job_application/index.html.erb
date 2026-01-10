@@ -19,7 +19,7 @@
           <td><%= application.platform %></td>
           <td><%= application.company %></td>
           <td><%= application.position %></td>
-          <td><%= application.state %></td>
+          <td><%= humanized_states(application.state) %></td>
           <td><%= link_to 'Show', application %></td>
           <td><%= link_to 'Edit', edit_job_application_path(application) %></td>
           <td><%= link_to 'Delete', application,

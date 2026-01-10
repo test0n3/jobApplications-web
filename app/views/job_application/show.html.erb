@@ -3,7 +3,7 @@
   <p><span class="font-bold">Position:</span> <%= @job_application.position %></p>
   <p><span class="font-bold">Company:</span> <%= @job_application.company %></p>
   <p><span class="font-bold">Platform:</span> <%= @job_application.platform %></p>
-  <p><span class="font-bold">State:</span> <%= @job_application.state %></p>
+  <p><span class="font-bold">State:</span> <%= humanized_states(@job_application.state) %></p>
 </section>
 
 <section>

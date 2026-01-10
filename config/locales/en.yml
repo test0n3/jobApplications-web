@@ -28,4 +28,11 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  job_application:
+    attributes:
+      states:
+        in_process: "In process"
+        in_interviews: "In interviews"
+        in_evaluation: "Under evaluation"
+        rejected: "Rejected"
+        hired: "Hired"
