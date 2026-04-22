@@ -1,6 +1,6 @@
 class JobApplicationController < ApplicationController
   def index
-    @job_applications = JobApplication.all
+    @job_applications = JobApplication.recent
   end
 
   def show

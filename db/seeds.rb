@@ -13,13 +13,13 @@ require 'faker'
 job_apps = [
   { application_date: Date.parse("2025-09-01"), position: "Junior Java developer", company: Faker::Company.name, platform: "LinkedIn" },
   { application_date: Date.parse("2025-09-01"), position: "Junior Ruby Developer", company: Faker::Company.name, platform: "Indeed" },
-  { application_date: Date.parse("2025-09-01"), position: Faker::Company.profession, company: Faker::Company.name, platform: "LinkedIn" },
+  { application_date: Date.parse("2025-09-05"), position: Faker::Company.profession, company: Faker::Company.name, platform: "LinkedIn" },
   { application_date: Date.parse("2025-09-04"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Ruby on Remote" },
   { application_date: Date.parse("2025-09-04"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Ruby on Remote" },
   { application_date: Date.parse("2025-09-08"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Get on Board", state: 2 },
-  { application_date: Date.parse("2025-09-08"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Get on Board", state: 3 },
+  { application_date: Date.parse("2025-09-09"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Get on Board", state: 3 },
   { application_date: Date.parse("2025-09-08"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Indeed", state: 4 },
-  { application_date: Date.parse("2025-09-10"), position: Faker::Company.profession, company: Faker::Company.name, platform: "LinkedIn", state: 5 },
+  { application_date: Date.parse("2025-09-11"), position: Faker::Company.profession, company: Faker::Company.name, platform: "LinkedIn", state: 5 },
   { application_date: Date.parse("2025-09-10"), position: Faker::Company.profession, company: Faker::Company.name, platform: "Indeed", state: 2 }]
 
 job_apps.each do |app|
