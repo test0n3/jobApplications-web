@@ -25,4 +25,6 @@ class JobApplication < ApplicationRecord
   validates :position, presence: true
   validates :company, presence: true
   validates :platform, presence: true
+
+  scope :recent, -> { order(application_date: :asc) }
 end
