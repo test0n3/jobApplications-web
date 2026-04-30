@@ -1,0 +1,29 @@
+<%= form_with(model: @job_application) do |form| %>
+  <div>
+    <%= form.label :application_date %>
+    <%= form.date_field :application_date %>
+  </div>
+  <div>
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+  <div>
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+  <div>
+    <%= form.label :platform %>
+    <%= form.text_field :platform %>
+  </div>
+  <div>
+    <%= form.label :state %>
+  </div>
+  <div>
+    <%= form.label :application_capture %>
+    <%= form.file_field :application_capture %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
