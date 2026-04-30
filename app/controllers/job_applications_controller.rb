@@ -1,4 +1,4 @@
-class JobApplicationController < ApplicationController
+class JobApplicationsController < ApplicationController
   def index
     @job_applications = JobApplication.recent
   end
