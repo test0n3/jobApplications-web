@@ -28,9 +28,10 @@
 #       enabled: "ON"
 
 en:
-  job_application:
+  job_applications:
     attributes:
       states:
+        draft: "Incomplete"
         in_process: "In process"
         in_interviews: "In interviews"
         in_evaluation: "Under evaluation"

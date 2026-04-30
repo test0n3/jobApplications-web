@@ -14,11 +14,12 @@
 
 class JobApplication < ApplicationRecord
   enum :state, {
-    in_process: 1,
-    in_interviews: 2,
-    in_evaluation: 3,
-    rejected: 4,
-    hired: 5
+    draft: 1,
+    in_process: 2,
+    in_interviews: 3,
+    in_evaluation: 4,
+    rejected: 5,
+    hired: 6
   }, default: :in_process
 
   validates :application_date, presence: true
@@ -27,4 +28,6 @@ class JobApplication < ApplicationRecord
   validates :platform, presence: true
 
   scope :recent, -> { order(application_date: :asc) }
+
+  has_one_attached :application_capture
 end
