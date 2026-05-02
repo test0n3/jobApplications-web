@@ -1,4 +1,5 @@
 <section>
+  <h2><%= @job_application.platform %> - <%=@job_application.company %> - <%= @job_application.position %></h2>
   <p><span class="font-bold">Application date:</span> <%= @job_application.application_date %></p>
   <p><span class="font-bold">Position:</span> <%= @job_application.position %></p>
   <p><span class="font-bold">Company:</span> <%= @job_application.company %></p>
@@ -8,4 +9,6 @@
 
 <section>
   <%= link_to 'Back', job_applications_path %>
+  <%= link_to 'Edit', edit_job_application_path(@job_application) %>
+  <%= button_to "Delete", @job_application, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
 </section>

@@ -20,14 +20,14 @@ class JobApplication < ApplicationRecord
     in_evaluation: 4,
     rejected: 5,
     hired: 6
-  }, default: :in_process
+  }, default: :draft
 
   validates :application_date, presence: true
   validates :position, presence: true
   validates :company, presence: true
   validates :platform, presence: true
 
-  scope :recent, -> { order(application_date: :asc) }
+  scope :recent, -> { order(application_date: :desc) }
 
   has_one_attached :application_capture
 end
